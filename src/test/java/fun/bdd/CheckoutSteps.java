@@ -14,8 +14,8 @@ public class CheckoutSteps {
     @Given("I am using the checkout app")
     public void i_am_using_the_checkout_app() {
         Inventory mockInventory = mock(Inventory.class);
-        doReturn(.49).when(mockInventory).get("banana");
-        doReturn(.59).when(mockInventory).get("apple");
+        doReturn(.49).when(mockInventory).getPrice("banana");
+        doReturn(.59).when(mockInventory).getPrice("apple");
         checkout = new Checkout(mockInventory);
     }
 

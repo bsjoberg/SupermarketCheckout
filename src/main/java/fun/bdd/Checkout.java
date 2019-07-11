@@ -16,6 +16,10 @@ public class Checkout {
     }
 
     public Double total() {
-        return inventory.get(items.get(0));
+        Double total = 0.0;
+
+        for (Iterator<String> i = items.iterator(); i.hasNext();)
+            total += inventory.getPrice(i.next());
+        return total;
     }
 }
