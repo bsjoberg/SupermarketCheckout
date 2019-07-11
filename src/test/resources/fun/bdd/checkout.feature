@@ -14,3 +14,9 @@ Feature: Display total of items that have been checked out
     When I scan an "apple"
     And I scan a "banana"
     Then I see my display total as 1.08
+
+  Scenario: Add multiple of the same type of fruit and display the total
+    Given I am using the checkout app
+    When I scan a "banana"
+    And I scan a "banana"
+    Then I see my display total as .98
